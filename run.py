@@ -7,19 +7,18 @@ driver = webdriver.Firefox(firefox_binary='C:\\Program Files\\Mozilla Firefox\\f
 wait = WebDriverWait(driver=driver, timeout=5)
 
 base_url = "https://anilist.co/"
+url_check = base_url + "user/"
+url_free = base_url + "404/"
 
 with open("usernames.txt") as file:
     usernames = file.readlines()
     for user in usernames:
-        driver.get(base_url+"user/"+user)
+        driver.get(url_check+user)
         url = driver.current_url
         try:
-            wait.until(EC.url_to_be(base_url+"404"))
+            wait.until(EC.url_to_be(url_free))
             print(f'{url} is free')
             with open("free_names.txt", "a") as f:
                 f.write(url + "\n")
         except Exceptions.TimeoutException:
             print(f'{url} is not free')
-
-
-
