@@ -15,7 +15,7 @@ Put geckodriver into the same folder.
 
 Insert wanted usernames into usernames.txt.
 
-py run.py
+py .\run.py
 
 # Optional changes
 Change line 6's "firefox_binary" to your firefox installation location.
