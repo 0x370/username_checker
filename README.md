@@ -4,8 +4,9 @@ Check usernames availability on various websites using Selenium and Python.
 Example website provided is "https://anilist.co/".
 
 # Requirements
-https://github.com/mozilla/geckodriver/releases
-Firefox installed.
+1. https://github.com/mozilla/geckodriver/releases
+
+2. Firefox installed.
 
 # Setup
 Put all files into one folder.
